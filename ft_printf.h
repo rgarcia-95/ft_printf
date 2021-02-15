@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 17:03:22 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/15 17:22:12 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 12:29:02 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,36 +41,26 @@ int				ft_printf(const char *s, ...);
 void			ft_hard_mode(const char *s, t_struct *t);
 void			ft_special(const char *s, t_struct *t);
 void			ft_type(const char *s, t_struct *t);
-
 void			ft_int(t_struct *t);
 void			ft_int_extra(t_struct *t);
-
 void			ft_unsigned(t_struct *t);
 void			ft_unsigned_extra(t_struct *t);
-
 void			ft_str(t_struct *t);
 void			ft_str_extra(t_struct *t);
-
 void			ft_char(t_struct *t);
-
 void			ft_pointer(t_struct *t);
 void			ft_pointer_extra(t_struct *t);
-
 void			ft_hexa(t_struct *t);
-
 void			ft_percent(t_struct *t);
-
 int				ft_isdigit(int c);
 ssize_t			ft_strlen(const char *s);
 int				ft_countdigits(long int c);
 void			ft_putstr_fd(char *s, int fd);
 char			*ft_strchr(const char *s, int c);
-
 char			*ft_itoa(int n);
 void			ft_write(int i, char c);
 char			*ft_strdup(const char *s1);
 char			*ft_itoa_u(unsigned int n);
-
 char			*ft_to_hexa(t_struct *t);
 char			*ft_to_hexa_l(t_struct *t);
 char			*ft_strjoin(char const *s1, char const *s2);

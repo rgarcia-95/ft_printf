@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 19:06:44 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/15 19:16:08 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 12:30:22 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ static void	ft_reinitialize(t_struct *t)
 	t->precision = 0;
 	t->width = 0;
 	t->size_num = 0;
-	t->str = "";
+	if (t->str != NULL)
+	{
+		free(t->str);
+		t->str = NULL;
+	}
 }
 
 void		ft_hard_mode(const char *s, t_struct *t)

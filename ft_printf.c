@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 18:57:53 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/15 19:04:48 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 12:18:20 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,13 @@ static void	ft_initialize(t_struct *t)
 	t->precision = 0;
 	t->width = 0;
 	t->size_num = 0;
-	t->str = "";
+	t->str = NULL;
 }
 
 int			ft_printf(const char *s, ...)
 {
-	t_struct *t;
+	t_struct	*t;
+	int			res;
 
 	if (!s)
 		return (-1);
@@ -49,6 +50,8 @@ int			ft_printf(const char *s, ...)
 		t->len = ft_strlen(s);
 	}
 	va_end(t->list);
+	res = t->len;
 	free(t);
-	return (t->len);
+	t = NULL;
+	return (res);
 }
